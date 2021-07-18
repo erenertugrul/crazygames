@@ -1,0 +1,79 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "crazygames plugin",
+	"text": {
+		"plugins": {
+			"eren_crazygames": {
+				"name": "crazygames",
+				"description": "crazygames plugin",
+				"help-url": "https://github.com/erenertugrul",
+				"properties": {
+				},
+				"aceCategories": {
+					"Advertisement": "Advertisement",
+					"Gameplay": "Gameplay Tracks",
+					"Etc": "Etc"
+				},
+				"conditions": {
+					"ad-finished": {
+						"list-name": "On Finished",
+						"display-text": "On Finished",
+						"description": "Triggered when an advertisement stops playing"
+					},
+					"ad-started": {
+						"list-name": "On Started",
+						"display-text": "On Started",
+						"description": "Triggered when an advertisement starts playing"
+					},
+					"ad-error": {
+						"list-name": "On Error",
+						"display-text": "On Error",
+						"description": "Triggered when an error has occurred. This event is also triggered when no advertisement is available"
+					},
+					"adblock": {
+						"list-name": "Adblock Detection",
+						"display-text": "Adblock Detection",
+						"description": "Detect whether the user has installed an adblock tool"
+					}
+				},
+				"actions": {
+					"show-ad": {
+						"list-name": "Show Advertisement",
+						"display-text": "Show {0} advertisement",
+						"description": "Show a advertisement",
+						"params": {
+							"ad_type": { "name":"Ad Types", "desc":" types of advertisements", "items":{"midgame":"midgame","rewarded":"rewarded"}}
+						}
+					},
+					"gameplay": {
+						"list-name": "Gameplay Track",
+						"display-text": "{0}",
+						"description": "Track when and how users are playing your games",
+						"params": {
+							"gameplay": { "name":"gameplay", "desc":" gameplay track", "items":{"gameplayStart":"Gameplay Start","gameplayStop":"Gameplay Stop"}}
+						}
+					},
+					"happytime": {
+						"list-name": "Happy Time",
+						"display-text": "Happy time!",
+						"description": "You can call on player achievements, it will possibly adapt the website to celebrate!"
+					},
+					"invitelink": {
+						"list-name": "Invite Link",
+						"display-text": "Invite link {0}",
+						"description": "You share the Crazygames version of your game to the players and invite them to join a multiplayer game",
+						"params": {
+							"link": { "name":"Room Id", "desc":"Room Id"}						
+						}
+					}
+				},
+				"expressions": {
+					"invitelink": {
+						"description": "returns to the last invitation link created",
+						"translated-name": "invite_link"
+					}
+				}
+			}
+		}
+	}
+}

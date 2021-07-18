@@ -1,0 +1,80 @@
+﻿{
+	"Advertisement": {
+		"conditions": [
+			{
+				"c2id": 2,
+				"id": "ad-finished",
+				"scriptName": "adFinished",
+				"isTrigger": "true"
+			},
+			{
+				"c2id": 0,
+				"id": "ad-started",
+				"scriptName": "adStarted",
+				"isTrigger": "true"
+			},
+			{
+				"c2id": 1,
+				"id": "ad-error",
+				"scriptName": "adError",
+				"isTrigger": "true"
+			}
+		],
+		"actions": [
+			{
+				"c2id": 0,
+				"id": "show-ad",
+				"scriptName": "show_ad",
+				"params": [
+					{"id":"ad_type", "type":"combo", "items":["midgame","rewarded"]}
+				]
+			}
+		]
+	},
+	"Gameplay": {
+		"actions": [
+			{
+				"c2id": 1,
+				"id": "gameplay",
+				"scriptName": "gameplay",
+				"params": [
+					{"id":"gameplay", "type":"combo", "items":["gameplayStart","gameplayStop"]}
+				]
+			}
+		]
+	},
+	"Etc": {
+		"actions": [
+			{
+				"c2id": 2,
+				"id": "happytime",
+				"scriptName": "happytime"
+			},
+			{
+				"c2id": 3,
+				"id": "invitelink",
+				"scriptName": "invitelink",
+				"params": [
+					{"id":"link", "type":"string"}
+				]
+			}
+		],
+		"conditions": [
+			{
+				"c2id": 3,
+				"id": "adblock",
+				"scriptName": "adblock"
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 0,
+				"id": "invitelink",
+				"expressionName": "invitelink",
+				"scriptName": "invitelink",
+				"highlight": false,
+				"returnType": "string"
+			}
+		]
+	}
+}
